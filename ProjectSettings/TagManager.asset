@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Obstacles
   - ObsToPush
+  - Enemy
+  - player
+  - portal
   layers:
   - Default
   - TransparentFX
