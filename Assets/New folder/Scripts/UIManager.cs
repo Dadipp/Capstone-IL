@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverMenu;
     public static UIManager Instance;
     [SerializeField] private TextMeshProUGUI healthText;
-
     private void Awake()
     {
         Instance = this;
