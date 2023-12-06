@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        movement = transform.position;
         EnableMovement();
         rb = GetComponent<Rigidbody2D>();
         movePoint.parent = null;
@@ -93,4 +94,5 @@ public class PlayerController : MonoBehaviour
         anim.enabled = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
+    
 }

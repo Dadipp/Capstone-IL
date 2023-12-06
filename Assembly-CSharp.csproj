@@ -62,8 +62,8 @@
     <Compile Include="Assets\New folder\Scripts\SceneController.cs" />
     <Compile Include="Assets\New folder\Scripts\PlayAgain.cs" />
     <Compile Include="Assets\New folder\Scripts\PingPongEnemyMove.cs" />
-    <Compile Include="Assets\FinishPoint.cs" />
     <Compile Include="Assets\New folder\Scripts\Path.cs" />
+    <Compile Include="Assets\New folder\Scripts\FinishPoint.cs" />
     <Compile Include="Assets\New folder\Scripts\StartMenu.cs" />
     <Compile Include="Assets\New folder\Scripts\Coin.cs" />
     <Compile Include="Assets\New folder\Scripts\UIManager.cs" />
@@ -71,11 +71,14 @@
     <Compile Include="Assets\New folder\Scripts\PlayerMovementScript.cs" />
     <Compile Include="Assets\New folder\Scripts\PlayerController.cs" />
     <Compile Include="Assets\New folder\Scripts\enemyPatrol.cs" />
+    <Compile Include="Assets\Path2.cs" />
+    <Compile Include="Assets\New folder\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\New folder\Scripts\Respawn.cs" />
     <Compile Include="Assets\New folder\Scripts\PortalController.cs" />
     <Compile Include="Assets\New folder\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scenes\Push.cs" />
     <Compile Include="Assets\New folder\Scripts\EndMenu.cs" />
+    <Compile Include="Assets\New folder\Scripts\SimpleFlash.cs" />
     <Compile Include="Assets\New folder\Scenes\UICutSceneManager.cs" />
     <Compile Include="Assets\New folder\Scripts\RetryGame.cs" />
   </ItemGroup>

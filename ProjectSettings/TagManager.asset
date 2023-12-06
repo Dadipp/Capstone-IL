@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - player
   - portal
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

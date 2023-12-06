@@ -19,7 +19,7 @@ public class Path : MonoBehaviour
         anim.SetBool("isRunning", true);
         // Set position of Enemy as position of the first waypoint
         transform.position = Points[pointsIndex].transform.position;
-        flipIndex = Points.Length - 3;
+        flipIndex = Points.Length - 20;
     }
 
     // Update is called once per frame

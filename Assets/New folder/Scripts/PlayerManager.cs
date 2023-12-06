@@ -18,6 +18,13 @@ public class PlayerManager : MonoBehaviour
     public Text TextTimer;
     public static int numberOfCoins;
     public TextMeshProUGUI coinsText;
+    private Vector3 checkpointPosition = Vector3.zero;
+    public Vector3 CheckpointPosition
+    {
+        get { return checkpointPosition; }
+        set { checkpointPosition = value; }
+    }
+
 
     public float Health
     {
@@ -29,6 +36,10 @@ public class PlayerManager : MonoBehaviour
             UIManager.Instance.UpdateHealth(health);
             PlayerPrefs.SetFloat("PlayerHealth", health);
         }
+    }
+    public void SetCheckpoint(Vector3 position)
+    {
+        checkpointPosition = position;
     }
 
     private void Awake()
@@ -72,24 +83,49 @@ public class PlayerManager : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+        else if (other.gameObject.tag == "Checkpoint")
+        {
+            Checkpoint checkpoint = other.gameObject.GetComponent<Checkpoint>();
+            if (checkpoint != null)
+            {
+                checkpointPosition = checkpoint.GetCheckpointPosition();
+            }
+        }
     }
+
 
     private void RespawnPlayer()
     {
         if (portal != null && player != null)
         {
-            player.transform.position = portal.transform.position;
-
-            PlayerController playerController = player.GetComponent<PlayerController>();
-            if (playerController != null)
+            if (checkpointPosition != Vector3.zero)
             {
-                if (playerController.isTeleporting)
+                PlayerController playerController = player.GetComponent<PlayerController>();
+                if (playerController != null)
                 {
-                    playerController.SetMovePointPosition(portal.transform.position);
+                    if (playerController.isTeleporting)
+                    {
+                        player.transform.position = checkpointPosition;
+                        playerController.SetMovePointPosition(transform.position);
+                    }
+                }          
+            }
+            else
+            {
+                player.transform.position = portal.transform.position;
+
+                PlayerController playerController = player.GetComponent<PlayerController>();
+                if (playerController != null)
+                {
+                    if (playerController.isTeleporting)
+                    {
+                        playerController.SetMovePointPosition(portal.transform.position);
+                    }
                 }
             }
         }
     }
+
 
     private bool CheckDeath()
     {
