@@ -19,8 +19,10 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHealth(float value)
     {
-        healthText.text = value.ToString();
+        int intValue = Mathf.RoundToInt(value);
+        healthText.text = intValue.ToString();
     }
+
 
     public void EnableGameOverMenu()
     {

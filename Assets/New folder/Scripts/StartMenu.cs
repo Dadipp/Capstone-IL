@@ -14,4 +14,10 @@ public class StartMenu : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
     }
+
+    public void QuitGame ()
+    {
+        Application.Quit();
+        Debug.Log("QUIT!");
+    }
 }
