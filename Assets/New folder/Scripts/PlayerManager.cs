@@ -74,8 +74,8 @@ public class PlayerManager : MonoBehaviour
         _uiManager = UIManager.Instance;
 
         // Mengambil nilai darah dari PlayerPrefs. Jika tidak ada, menggunakan nilai awal.
-        health = PlayerPrefs.GetFloat("PlayerHealth");
-
+        health = PlayerPrefs.GetFloat("PlayerHealth", 4f);
+        health = Mathf.Max(health, 0);
         _uiManager.UpdateHealth(health);
 
         if (player != null)

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\New folder\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Mainmenu.cs" />
     <Compile Include="Assets\New folder\Scripts\SceneController.cs" />
     <Compile Include="Assets\New folder\Scripts\PlayAgain.cs" />
     <Compile Include="Assets\New folder\Scripts\SoundManager.cs" />
@@ -72,7 +73,6 @@
     <Compile Include="Assets\New folder\Scripts\UIManager.cs" />
     <Compile Include="Assets\New folder\Scripts\Invulnerability.cs" />
     <Compile Include="Assets\New folder\Scripts\PlayerMovementScript.cs" />
-    <Compile Include="Assets\Obstacles.cs" />
     <Compile Include="Assets\New folder\Scripts\PlayerController.cs" />
     <Compile Include="Assets\New folder\Scripts\enemyPatrol.cs" />
     <Compile Include="Assets\Path2.cs" />
@@ -84,6 +84,7 @@
     <Compile Include="Assets\New folder\Scripts\HighScore.cs" />
     <Compile Include="Assets\Scenes\Push.cs" />
     <Compile Include="Assets\New folder\Scripts\Health Collectible.cs" />
+    <Compile Include="Assets\New folder\Obstacles.cs" />
     <Compile Include="Assets\New folder\Scripts\EndMenu.cs" />
     <Compile Include="Assets\New folder\Scripts\SimpleFlash.cs" />
     <Compile Include="Assets\New folder\Scenes\UICutSceneManager.cs" />
